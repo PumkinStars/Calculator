@@ -31,7 +31,7 @@ let calculateResult = (expression) => {
   let numbers = expression.split(/[-+X÷]/g);
   let operands = expression.match(/[-+X÷]/g);
 
-  numbers = numbers.filter(Boolean).map(parseFloat);
+  numbers = numbers.map(parseFloat);
 
 
   if (numbers.length === 0 || numbers.includes(NaN)) {
